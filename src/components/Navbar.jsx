@@ -78,7 +78,10 @@ export default function Navbar() {
           </div>
         </div>
 
-        {isOpen && <div className="navbar__overlay" onClick={() => setIsOpen(false)} />}
+        <div
+          className={`navbar__overlay ${isOpen ? 'navbar__overlay--visible' : ''}`}
+          onClick={() => setIsOpen(false)}
+        />
       </nav>
     </>
   )
